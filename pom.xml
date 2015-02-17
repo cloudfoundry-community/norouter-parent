@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.cloudfoundry-community</groupId>
+	<artifactId>norouter-parent</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.2.1.RELEASE</version>
+	</parent>
+
+	<properties>
+		<cf-java-component.version>0.3-SNAPSHOT</cf-java-component.version>
+		<java.version>1.8</java.version>
+		<norouter-core.version>0.1-SNAPSHOT</norouter-core.version>
+		<testng.version>6.8.21</testng.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.github.cloudfoundry-community</groupId>
+				<artifactId>cf-spring</artifactId>
+				<version>${cf-java-component.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.testng</groupId>
+				<artifactId>testng</artifactId>
+				<version>${testng.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.github.cloudfoundry-community</groupId>
+				<artifactId>norouter-core</artifactId>
+				<version>${norouter-core.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
